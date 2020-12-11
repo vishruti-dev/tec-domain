@@ -60,6 +60,43 @@ hr {
 *{
     background-color: black;
 }
+h3{
+	color:white;
+	
+
+}
+
+
+*{
+    background-color: black;
+}
+
+@media (min-width: 992px)
+.icon-card {
+    /*max-width: 400px;*/
+    padding: 35px 30px;
+    margin-top: -35px;
+    margin-bottom: -35px;
+    transition: all 0.3s ease-in-out;
+}
+.icon-card {
+    /*max-width: 340px;*/
+    margin: 10px;
+    text-align: center;
+}
+
+.icon-wrap{
+	width:144px;
+	height:100px;
+	background-color: black;
+	padding-bottom: 20px;
+	display: flex;
+  	justify-content: : center;
+  	align-items: center;
+ 
+}
+
+
 #iot-m{
     animation-name: spin;
     animation-duration: 4000ms;
@@ -72,7 +109,7 @@ hr {
     animation-play-state: running;
     transform: rotate(360deg);
   }
-/*@keyframes spin {
+@keyframes spin {
     from {
       transform: rotate(0deg);
     }
@@ -80,26 +117,24 @@ hr {
       transform: rotate(360deg);
     }
   }
-*/
 
-#machine{
-    animation-name: rotate;
-    animation-duration: 4000ms;
+
+#electronics-m{
+    animation-name: connect;
+    animation-duration: 1000ms;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    transform-origin: 37px 37px;
+    animation-timing-function: linear; 
+    animation-direction: alternate;  
     animation-play-state: paused;
 }
-
-
-.machine-learning:hover #machine {
-    animation-play-state: running;
+.electronics:hover #electronics-m{
+  animation-play-state: running;
 }
-@keyframes rotation {
-	from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+@keyframes connect {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(25px);
+  }
 }
