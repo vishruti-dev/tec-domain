@@ -4,22 +4,14 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    margin: 20px;
+    margin: 30px;
 }
-
-
-
-
-
 body{
 	background-color: black;
 	background-size: cover;
 	
 	height: 314px;
 }
-
-
-
 section-heading.left{
     position: absolute;
     z-index: 1;
@@ -42,6 +34,7 @@ h1 {
 * {
     margin: 0;
     padding: 0;
+	background-color: black;
 }
 hr {
     display: block;
@@ -55,21 +48,10 @@ hr {
     border-width: 1px;
 }
 
-
-
-*{
-    background-color: black;
-}
 h3{
 	color:white;
-	
-
 }
 
-
-*{
-    background-color: black;
-}
 
 @media (min-width: 992px)
 .icon-card {
@@ -88,14 +70,58 @@ h3{
 .icon-wrap{
 	width:144px;
 	height:100px;
-	background-color: black;
+	background-color: rgba(39, 39, 39, 1);
 	padding-bottom: 20px;
 	display: flex;
-  	justify-content: : center;
+  	justify-content: center;
   	align-items: center;
  
 }
 
+.ml{
+	background-color: rgba(39, 39, 39, 1);
+}
+.web{
+	background-color: rgba(39, 39, 39, 1);
+}
+.app{
+	background-color: rgba(39, 39, 39, 1);
+}
+.electronics{
+	background-color: rgba(39, 39, 39, 1);
+}
+.design{
+	background-color: rgba(39, 39, 39, 1);
+}
+.cv{
+	background-color: rgba(39, 39, 39, 1);
+}
+.iot{
+	background-color: rgba(39, 39, 39, 1);
+}
+#ml-m{
+  animation-name: spin-ml;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-play-state: paused;
+}
+.ml:hover #ml-m {
+  animation-play-state: running;
+}
+@keyframes spin-ml {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.ml:hover #ml-dot {
+  animation-play-state: running;
+}
 
 #iot-m{
     animation-name: spin;
@@ -107,7 +133,6 @@ h3{
 }
 .iot:hover #iot-m {
     animation-play-state: running;
-    transform: rotate(360deg);
   }
 @keyframes spin {
     from {
@@ -118,6 +143,66 @@ h3{
     }
   }
 
+#web-m{
+  animation-name: web-scrn;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-play-state: paused;
+}
+.web:hover #web-m {
+  animation-play-state: running;
+}
+@keyframes web-scrn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}
+
+#app-m-left{
+    animation-name: rect-l;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    animation-direction: alternate;  
+    animation-play-state: paused;
+}
+#app-m-right{
+    animation-name: rect-r;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    animation-direction: alternate;  
+    animation-play-state: paused;
+}
+.app:hover #app-m-left{
+  animation-play-state: running;
+}
+.app:hover #app-m-right{
+  animation-play-state: running;
+}
+@keyframes rect-l {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}
+@keyframes rect-r {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-5px);
+  }
+}
 
 #electronics-m{
     animation-name: connect;
@@ -137,4 +222,43 @@ h3{
   to {
     transform: translateX(25px);
   }
+}
+
+#design-m{
+  animation-name: penmove;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-play-state: paused;
+}
+.design:hover #design-m {
+  animation-play-state: running;
+}
+@keyframes penmove {
+  from {
+    transform: rotate(-75deg);
+  }
+  to {
+    transform: rotate(75deg);
+  }
+}
+
+.cv:hover #cv-m {
+  animation-play-state: running;
+}
+#cv-m{
+	animation-name: cv-beat;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    animation-direction: alternate;  
+    animation-play-state: paused;
+    transform-origin: center;
+}
+@keyframes cv-beat {
+    0% {transform: scale(1);} 
+    50% {transform: scale(0.8);}   
 }
