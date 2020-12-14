@@ -1,3 +1,14 @@
+.marquee{
+  height: 200px;
+  width: 1600px;
+ 
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  /*margin: 200px auto;*/
+
+}
+
 .container{
 	
 	display: flex;
@@ -66,6 +77,28 @@ h3{
     /*max-width: 340px;*/
     margin: 10px;
     text-align: center;
+	background-color: rgba(39, 39, 39, 1);
+	display: inline-block;
+	transition: all .2s ease-out;
+}
+
+.icon-card:hover {
+  transform: scale(1.05);
+  opacity: .8;
+  cursor: pointer;
+}
+.marquee-inner {
+  display: block;
+  width: 150%;
+  position: absolute;
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -150%; }
+}
+.marquee-inner:hover {
+  animation-play-state: paused;
 }
 
 .icon-wrap{
